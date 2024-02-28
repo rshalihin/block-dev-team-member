@@ -1,15 +1,48 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/boilerplate",
-	"title": "Boilerplate",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"name": "ct-block/team-members",
+	"title": "Team Members",
+	"category": "media",
+	"icon": "groups",
+	"description": "Team Members Gutenberg card block.",
+	"keyword": ["Team", "Member", "card", "Team Members"],
 	"supports": {
 		"html": false
 	},
-	"textdomain": "boilerplate",
+	"textdomain": "team-block",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+	"style": "file:./build/style-index.css",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"example": {
+		"attributes": {
+			"columns": 3
+		},
+		"innerBlocks": [
+			{
+				"name": "ct-block/team-member",
+				"attributes": {
+					"name": "Jone Doe",
+					"bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat consectetur enim nec imperdiet.",
+					"url": "https://picsum.photos/id/1012/200/300",
+					"socialLinks": [{"icon": "facebook"}, {"icon": "twitter"}, {"icon": "instagram"}]
+
+				}
+			},
+			{
+				"name": "ct-block/team-member",
+				"attributes": {
+					"name": "Jonathan Smith",
+					"bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat consectetur enim nec imperdiet.",
+					"url": "https://picsum.photos/id/1011/200/300",
+					"socialLinks": [{"icon":"facebook"}, {"icon":"instagram"}, {"icon":"twitter"}]
+				}
+			}
+		]
+	}
 }
