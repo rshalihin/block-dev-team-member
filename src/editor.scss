@@ -10,7 +10,7 @@
 	@for $i from 1 through 6 {
 		&.has-#{$i}-columns {
 
-			> .block-editor-inner-blocks > .block-editor-block-list-layout > {
+			> .block-editor-inner-blocks > .block-editor-block-list__layout > {
 
 				[data-type="ct-block/team-member"] {
 					width: calc(100% / #{$i} - 20px);
@@ -30,7 +30,7 @@
 		}
 	}
 
-	> .block-editor-inner-blocks > .block-editor-block-list-layout {
+	> .block-editor-inner-blocks > .block-editor-block-list__layout {
 		display: flex;
 		flex-wrap: wrap;
 		margin-left: -10px;
